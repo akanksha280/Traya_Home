@@ -1,10 +1,7 @@
 import React from 'react'
 import '../index.css';
 import {
-	
-	
-	
-    Button
+  Button
 } from './HomeStyles';
 
 
