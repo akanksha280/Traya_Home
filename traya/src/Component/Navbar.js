@@ -1,11 +1,12 @@
 // Navbar.js
 import React, { useState, Fragment } from 'react'
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@coreui/coreui/dist/css/coreui.min.css";
 import { FaBars } from 'react-icons/fa';
 import {FaWhatsapp} from 'react-icons/fa';
 import {FaRegUserCircle} from 'react-icons/fa';
 import {FaShoppingCart} from 'react-icons/fa';
+
 import Home from './Home.js';
 import {
 	Nav,
@@ -14,13 +15,26 @@ import {
 	NavItem,
 	NavLinks,
 	NavMenu,
-	MobileIcon,
+	Button1,
+	
     Button
 } from './NavbarStyles';
+
+import {
+	// eslint-disable-next-line
+	CButton,
+	CModal,
+	CModalBody,
+	// eslint-disable-next-line
+	CModalFooter,
+	CModalHeader,
+	CModalTitle,
+  } from "@coreui/react";
 import '../App.css';
 
 const Navbar = () => {
 	const [colorChange, setColorchange] = useState(false);
+	const [bar,setBar]=useState(false);
 	const changeNavbarColor = () => {
 		if (window.scrollY >= 80) {
 			setColorchange(true);
@@ -29,17 +43,24 @@ const Navbar = () => {
 			setColorchange(false);
 		}
 	};
+	const handleBar=()=>{
+        setBar(!bar);
+		
+
+	}
     
 	window.addEventListener('scroll', changeNavbarColor);
 	return (
 		<Fragment>
-            
+            <section id='navv' >
 			<Nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
-				<NavContainer>
+				
+				<NavContainer >
 					<NavLogo href="#"><h1>Traya.</h1></NavLogo>
-					<MobileIcon>
+					{/* <MobileIcon>
 						<FaBars />
-					</MobileIcon>
+						
+					</MobileIcon> */}
 					<NavMenu>
 						<NavItem className='navbar-nav justify-content-center'>
 							{/* <NavLinks href="#">About</NavLinks> */}
@@ -54,37 +75,63 @@ const Navbar = () => {
 						<NavItem>
 							<NavLinks href="#"><FaShoppingCart size={30}/></NavLinks>
 						</NavItem>
-						<NavItem>
-							<NavLinks   data-mdb-toggle="modal" data-mdb-target="#exampleModal"><FaBars size={30}/></NavLinks>
+						<NavItem className=' navbar-nav justify-content-end'>
+							<NavLinks onClick={handleBar} ><FaBars  size={30}/></NavLinks>
 						</NavItem>
 					</NavMenu>
+					
 				</NavContainer>
+				
 			</Nav>
+			
             <Home/>
+			</section>
+			<section className='Card'>
+				<h1>gjsdjsghdihi</h1>
+			</section>
+			
+			{/* <CButton onClick={() => setBar(!bar)}>
+        
+      </CButton> */}
+	   <section className="bg-image d-flex align-items-center" ></section>
+      <CModal fullscreen visible={bar} onClose={() => setBar(false)} id="bgImage">
+	 <div >
 
-            <div className="modal top fade"
-     id="exampleModal"
-     tabIndex="-1"
-     aria-labelledby="exampleModalLabel"
-     aria-hidden="true"
-     data-mdb-backdrop="true"
-     data-mdb-keyboard="true">
-  <div className="modal-dialog modal-fullscreen-sm-down">
-    <div className="modal-content">
-      <div className="modal-header">
-        <h5 className="modal-title" id="exampleModalLabel">Traya.</h5>
-        <button type="button" className="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div className="modal-body">...</div>
-      <div className="modal-footer">
-        <button type="button" className="btn btn-secondary" data-mdb-dismiss="modal">
-          Close
-        </button>
-        <button type="button" className="btn btn-primary">Save changes</button>
-      </div>
+        <CModalHeader onClose={() => setBar(false)} >
+          <CModalTitle className='text-muted fs-1 fw-bolder'>Traya.</CModalTitle>
+        </CModalHeader>
+        <CModalBody>
+		<div className="container overflow-hidden" >
+  <div className="row gx-5">
+	<div className='col'></div>
+    <div className="col">
+     <div className="p-1 ">
+	 <h3 className='fw-bold'>WHAT WE DO</h3><br/>
+<h4 className='fw-light'>We help you take control of your hairloss in a personalised, and scientific way.</h4>
+<div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold' >Track Order</Button1></div><br/>
+<div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold ' >My Plan</Button1></div><br/>
+<div><Button1 className='btn btn-sm btn-outline-dark btn-round fw-bold ' >Hair Test<sup style={{fontSize:"10px"}}>TM</sup></Button1></div><br/>
+<div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold ' >Traya Combos</Button1></div><br/>
+<div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold ' >5 Month Money Back Gurantee</Button1></div><br/>
+<div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold ' >Log in</Button1></div><br/>
+<div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold ' >Referral</Button1></div><br/>
+	 </div>
+    </div>
+    <div className="col">
+      <div className="p-3  ">Custom column padding</div>
     </div>
   </div>
 </div>
+		</CModalBody>
+        {/* <CModalFooter>
+          <CButton color="secondary" onClick={() => setBar(false)}>
+            Close
+          </CButton>
+          <CButton color="primary">Save changes</CButton>
+        </CModalFooter> */}
+		</div>
+      </CModal>
+	  
 		</Fragment>
         
 	)

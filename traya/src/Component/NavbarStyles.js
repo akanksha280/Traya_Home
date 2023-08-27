@@ -13,6 +13,19 @@ export const Button=styled.button`
     color:white;
     font-weight:bold;
 }`;
+export const Button1=styled.button`
+
+    
+    color:black;
+    font-weight:bold;
+    align-items: center;
+    font-size:15px;
+
+&:hover{
+    background:#544F4D;
+    color:white;
+    font-weight:bold;
+}`;
 export const Nav = styled.nav`
 background: transparent;
 height: 80px;
