@@ -2,10 +2,15 @@
 import React, { useState, Fragment } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@coreui/coreui/dist/css/coreui.min.css";
+import Fade from 'react-reveal/Fade';
 import { FaBars } from 'react-icons/fa';
 import {FaWhatsapp} from 'react-icons/fa';
 import {FaRegUserCircle} from 'react-icons/fa';
 import {FaShoppingCart} from 'react-icons/fa';
+import {FaAngleRight} from 'react-icons/fa';
+import {FaAngleLeft} from 'react-icons/fa';
+import Circle from './Round.js';
+import Circle1 from './Round1.js';
 
 import Home from './Home.js';
 import {
@@ -34,6 +39,7 @@ import '../App.css';
 
 const Navbar = () => {
 	const [colorChange, setColorchange] = useState(false);
+	const [isActive,setActive]=useState(true);
 	const [bar,setBar]=useState(false);
 	const changeNavbarColor = () => {
 		if (window.scrollY >= 80) {
@@ -48,11 +54,16 @@ const Navbar = () => {
 		
 
 	}
+	const handleAngle=()=>{
+		// handleAngle(angle);
+		setActive(!isActive);
+	}
+
     
 	window.addEventListener('scroll', changeNavbarColor);
 	return (
 		<Fragment>
-            <section id='navv' >
+            <section id='navv' className='Card' >
 			<Nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
 				
 				<NavContainer >
@@ -87,8 +98,10 @@ const Navbar = () => {
             <Home/>
 			</section>
 			<section className='Card'>
-				<h1>gjsdjsghdihi</h1>
+				<Circle/>
+				
 			</section>
+			
 			
 			{/* <CButton onClick={() => setBar(!bar)}>
         
@@ -114,7 +127,13 @@ const Navbar = () => {
 <div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold ' >Traya Combos</Button1></div><br/>
 <div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold ' >5 Month Money Back Gurantee</Button1></div><br/>
 <div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold ' >Log in</Button1></div><br/>
-<div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold ' >Referral</Button1></div><br/>
+<div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold ' >Referral</Button1></div>
+<div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold ' onClick={handleAngle}>Products<span>{isActive?<FaAngleRight/>:<FaAngleLeft/>}
+<Fade right>
+ <h1>gjjsdj</h1>
+</Fade>
+</span></Button1></div><br/>
+
 	 </div>
     </div>
     <div className="col">
