@@ -24,6 +24,7 @@ import {
 	
     Button
 } from './NavbarStyles';
+import Marquee from './marquee.js';
 
 import {
 	// eslint-disable-next-line
@@ -63,7 +64,7 @@ const Navbar = () => {
 	window.addEventListener('scroll', changeNavbarColor);
 	return (
 		<Fragment>
-            <section id='navv' className='Card' >
+            <section id='navv' className='card pb-5' >
 			<Nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
 				
 				<NavContainer >
@@ -96,8 +97,10 @@ const Navbar = () => {
 			</Nav>
 			
             <Home/>
+			
 			</section>
 			<section className='Card'>
+			<Marquee/>
 				<Circle/>
 				
 			</section>

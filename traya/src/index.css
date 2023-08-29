@@ -6,7 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('/src/images/backgr.jpg');
+  
   
 }
 
@@ -56,4 +56,9 @@ text-decoration: none;
 
  
 }
-
+#card3{
+  background-image: url('/src/images/pink.jpg');
+}
+#navv{
+  background-image: url('/src/images/backgr.jpg');
+}
