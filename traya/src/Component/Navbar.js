@@ -11,6 +11,7 @@ import {FaAngleRight} from 'react-icons/fa';
 import {FaAngleLeft} from 'react-icons/fa';
 import Circle from './Round.js';
 import Circle1 from './Round1.js';
+import Disclaimer from './Disclaimer.js';
 
 import Home from './Home.js';
 import {
@@ -25,6 +26,8 @@ import {
     Button
 } from './NavbarStyles';
 import Marquee from './marquee.js';
+import Customer from './Customer.js';
+import SafeScientific from './safeScientific.js';
 
 import {
 	// eslint-disable-next-line
@@ -101,7 +104,11 @@ const Navbar = () => {
 			</section>
 			<section className='Card'>
 			<Marquee/>
+			<SafeScientific/>
 				<Circle/>
+				<Disclaimer/>
+				
+				
 				
 			</section>
 			

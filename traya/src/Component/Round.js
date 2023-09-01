@@ -2,6 +2,7 @@ import React, {  Fragment } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@coreui/coreui/dist/css/coreui.min.css";
 import img1  from '../images/circle.jpg'
+import img2 from '../images/pink.jpg';
 import {Button} from './RoundStyles'
 const Round=()=> {
   return (
@@ -71,16 +72,24 @@ const Round=()=> {
 
 {/* CARd3 */}
 {/* <div className="card  mb-3" style={{width: "18rem;",height:"10000px;"}} > */}
-<div className="container position-relative border-rounded mb-9 mt-3 ml-7 mr-9 object-fit-cover pb-5 " style={{width: "18rem;",height:"10000px;"}} id='card3'>
+<div className="container position-relative border-rounded mb-9 mt-3 ml-7 mr-9 object-fit-cover pb-5 mb-3" style={{width: "18rem;",height:"100vh;"}} >
   <div className="card-body">
-    <h1 className="card-title">TRAYA 2X2 REGIMEN</h1>
-    <p className="card-text">
-        <br/>
-    <h4 className='fw-lighter'>2min<br/>twice a day
-</h4><br/>
+   
+   
+    <img class="card-img-top" src={img2} alt="Card imge"/>
+    <div class="card-img-overlay">
+    <p className="card-text text-center mt-5">
+    <h1 className="card-title fw-light">TRAYA 2X2 REGIMEN</h1>
+    <br/>
+    <h1 className='fw-bolder'>2min<br/></h1><h1 className='fw-bold'>twice a day
+</h1><br/>
     <h3>Follow a simple daily routine. Best results when used for 5 months.</h3><br/>
+    <Button className='btn btn-lg btn-secondary btn-round pl-5 text-center' style={{width:"1000px;"}} size={70}>The Science</Button>
+       
     </p>
-    <Button className='btn btn-lg btn-secondary btn-round pl-5' size={50}>The Science</Button>
+    </div>
+       
+   
 						</div>
 </div>
 {/* </div> */}
