@@ -12,6 +12,7 @@ import {FaAngleLeft} from 'react-icons/fa';
 import Circle from './Round.js';
 import Circle1 from './Round1.js';
 import Disclaimer from './Disclaimer.js';
+import Footer1 from './footer1.js';
 
 import Home from './Home.js';
 import {
@@ -68,7 +69,7 @@ const Navbar = () => {
 	return (
 		<Fragment>
             <section id='navv' className='card pb-5' >
-			<Nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
+			<Nav className={colorChange ? 'navbar colorChange ' : 'navbar '}>
 				
 				<NavContainer >
 					<NavLogo href="#"><h1>Traya.</h1></NavLogo>
@@ -104,9 +105,11 @@ const Navbar = () => {
 			</section>
 			<section className='Card'>
 			<Marquee/>
+			<Circle/>
 			<SafeScientific/>
-				<Circle/>
+				
 				<Disclaimer/>
+				<Footer1/>
 				
 				
 				
