@@ -32,16 +32,7 @@ const SafeScientific=()=> {
                 
                
             </div>
-            <div className='row m-3 pt-5 pl-2'>
-                <div className='cols offset-1'>
-                    <img src={d} alt='h'></img> 
-                    
-                    <img className='offset-1'  src={e} alt='h'></img>
-                    <img className='offset-1'  src={f} alt='h'></img>
-                </div>
-                
-               
-            </div>
+            
             <div className='row m-3 pt-5 pl-2'>
                 <div className='cols offset-1'>
                     <img src={g} alt='h'></img>  

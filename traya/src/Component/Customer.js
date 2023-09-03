@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "@coreui/coreui/dist/css/coreui.min.css";
 import cust1a from '../images/customer/shweta1.jpg';
@@ -8,7 +9,7 @@ import cust1d from '../images/customer/shweta4.jpg';
 
 const Customer = () => {
     const cust=[
-        {
+        { 
             "name":"Shweta Dhvecha",
             "reviewedDate":"20 August 2021",
             "UsedDt":"3 Months",
@@ -17,8 +18,9 @@ const Customer = () => {
             "imgg":[{cust1a},{cust1b},{cust1c},{cust1d}]
         }
     ]
+    const [custo,setCust]=useState(cust);
 
-    const listItems = cust.map((element)=>{
+    const listItems = custo.map((element)=>{
         
         console.log(element+"jj");
         return (
