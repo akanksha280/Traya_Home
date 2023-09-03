@@ -18,7 +18,7 @@ const footer1 = () => {
 
         </div>
         <div className="col-lg-6 col-md-12 mb-4 mb-md-0">
-          <h6 className='fw-lighter'>
+          <h6 className='fw-lighter font-small'>
           Registered Copyright 2023<br></br><br></br>
           <strong>Tatvartha Health Pvt. Ltd.</strong><br></br>
           <strong>CIN:</strong>

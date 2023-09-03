@@ -64,7 +64,7 @@ const Customer = () => {
   <div className="carousel-inner">
     <div className="carousel-item active">
         {console.log(cust[0].imgg)}
-       <p>ddfd</p>
+       <p>{listItems}</p>
       {/* <img className="d-block w-100" src="..." alt="First slide"/> */}
     </div>
     <div className="carousel-item">

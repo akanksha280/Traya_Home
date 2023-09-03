@@ -107,7 +107,7 @@ const Navbar = () => {
 			<Marquee/>
 			<Circle/>
 			<SafeScientific/>
-				
+				<Customer></Customer>
 				<Disclaimer/>
 				<Footer1/>
 				
