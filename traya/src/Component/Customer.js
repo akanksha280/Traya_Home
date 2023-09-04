@@ -1,28 +1,17 @@
 import React from 'react';
 import { useState } from 'react';
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "@coreui/coreui/dist/css/coreui.min.css";
-import cust1a from '../images/customer/shweta1.jpg';
-import cust1b from '../images/customer/shweta2.jpg';
-import cust1c from '../images/customer/shweta3.jpg';
-import cust1d from '../images/customer/shweta4.jpg';
+import cust from './customer.jsx';
+import Card from './Card.js';
 
 const Customer = () => {
-    const cust=[
-        { 
-            "name":"Shweta Dhvecha",
-            "reviewedDate":"20 August 2021",
-            "UsedDt":"3 Months",
-            "Desc":"“By giving myself a complete lifestyle change inspired and instructed by Traya. ",
-            "months":["Month1","Month2","Month4","Month5"],
-            "imgg":[{cust1a},{cust1b},{cust1c},{cust1d}]
-        }
-    ]
+   
     const [custo,setCust]=useState(cust);
-
-    const listItems = custo.map((element)=>{
+console.log(cust+"hi");
+    const listItems = custo.map((element,index)=>{
         
-        console.log(element+"jj");
+        console.log(element+"jj"+custo);
         return (
             <div className="row row-cols-4 row-cols-md-4 g-3 ">
         <div className="col">
@@ -60,29 +49,19 @@ const Customer = () => {
   return (
     
     <>
-      <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-        {console.log(cust[0].imgg)}
-       <p>{listItems}</p>
-      {/* <img className="d-block w-100" src="..." alt="First slide"/> */}
-    </div>
-    <div className="carousel-item">
-      <img className="d-block w-100" src="..." alt="Second slide"/>
-    </div>
-    <div className="carousel-item">
-      <img className="d-block w-100" src="..." alt="Third slide"/>
-    </div>
-  </div>
-  <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="sr-only">Previous</span>
-  </a>
-  <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="sr-only">Next</span>
-  </a>
-</div>
+      {console.log(cust[0].imgg)}
+       {cust.map((e)=>{
+        return(
+          <Card img={e.imgg}
+          name={e.name}
+          reviewedDt={e.reviewedDate}
+          usedDt={e.usedDt}
+          desc={e.desc}
+          months={e.months}
+           />
+        )
+       })}
+      
     </>
   )
 }

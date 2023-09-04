@@ -29,7 +29,8 @@ import {
 import Marquee from './marquee.js';
 import Customer from './Customer.js';
 import SafeScientific from './safeScientific.js';
-
+import Buildplan from './Buildplan.js';
+import Card2 from './Card2.js';
 import {
 	// eslint-disable-next-line
 	CButton,
@@ -41,6 +42,7 @@ import {
 	CModalTitle,
   } from "@coreui/react";
 import '../App.css';
+
 
 const Navbar = () => {
 	const [colorChange, setColorchange] = useState(false);
@@ -107,6 +109,8 @@ const Navbar = () => {
 			<Marquee/>
 			<Circle/>
 			<SafeScientific/>
+			<Card2/>
+			<Buildplan/>
 				<Customer></Customer>
 				<Disclaimer/>
 				<Footer1/>
