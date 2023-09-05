@@ -21,7 +21,7 @@ const CustomerCard = (props) =>{
         
             
         <img src={i.c} className="" style={{display:"block",height:"150px", width:"150px", margin:"10px"}} alt="dihfh"/>
-        <p>{i.months}</p>
+        <p className='text-center'>{i.months}</p>
        
         </div>
       

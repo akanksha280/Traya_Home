@@ -28,6 +28,7 @@ const Card2 = () => {
   return (
     <>
       <h1  className='text-center fw-bold'>Here Is How It Will Work</h1>
+      <div className='container '>
       <div className='row row-cols-3 p-4 m-1' >
       {u.map((e)=>{
         return(
@@ -41,8 +42,8 @@ const Card2 = () => {
               <div  className='row row-cols-2'>
               <span className='cols text-left'>
               <img src={e.img} alt="phone" style={{height:"67px",marginRight:"50px"}}></img></span>
-              <span className='cols offset-5  text-right' style={{marginBottom:"1000000px"}}>
-              <h2 className='text-right text-blue'>{e.steps}<br></br></h2><h5 className='fw-light'>(takes{e.time})</h5>
+              <span className='cols offset-5  text-right'>
+              <h2 className='text-right text-blue' style={{marginBottom:"10px"}}>{e.steps}<br></br></h2><h5 className='fw-light'>(takes{e.time})</h5>
               <br></br>
               </span>
               </div>
@@ -56,7 +57,8 @@ const Card2 = () => {
       })
     }
      </div>
-     <br></br>
+     
+     </div>
     </>
   )
 }

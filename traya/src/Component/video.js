@@ -1,24 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@coreui/coreui/dist/css/coreui.min.css";
+import vid from './video.jsx';
 
-import gr from './googlereview.jsx';
-
-import GoogleCard from './GoogleCard.js';
-const GoogleReview= () => {
+import VideoCard from './VideoCard.js';
+import { Button } from './EssentialStyles.js';
+const Video= () => {
    
     const responsive = {
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
-          items: 3,
-          slidesToSlide: 3 // optional, default to 1.
+          items: 5,
+          slidesToSlide: 1 // optional, default to 1.
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
           items: 2,
-          slidesToSlide: 2 // optional, default to 1.
+          slidesToSlide: 1 // optional, default to 1.
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
@@ -26,8 +26,10 @@ const GoogleReview= () => {
           slidesToSlide: 1 // optional, default to 1.
         }
       };
+   
 
    return (
+     
     
     
 
@@ -35,9 +37,9 @@ const GoogleReview= () => {
         <>
         
         <br/><br/><br/>
-        <div className="border-0 text-center container card" >
+        <div className="border-0 text-center container " >
             <br/>
-        <h2 className='text-center fw-bold'>Our GoogleReviews</h2>
+        
         <br/><br/>
         
 <Carousel
@@ -58,14 +60,16 @@ const GoogleReview= () => {
   dotListClass="custom-dot-list-style"
   itemClass="carousel-item-padding-40-px"
 >
-   {gr.map((e)=>{
+   {vid.map((e)=>{
         return(
             <div class="carousel-item active">
                 <div className='card border-0' >
-          <GoogleCard 
-          name={e.name}
+          <VideoCard 
           
-          desc={e.desc}
+          videoLink={e.videoLink}
+          
+          poster={e.poster}
+          
           
            />
            </div>
@@ -78,10 +82,11 @@ const GoogleReview= () => {
 
   
 </Carousel>
+<br/><br/>
+<div>
   
 
-
-
+</div>
 
   </div>
  
@@ -89,9 +94,13 @@ const GoogleReview= () => {
 <br/><br/><br/>
 
 <br/><br/>
+
+
+  
         </>
         )
+        
     
 }
 
-export default GoogleReview;
+export default Video;

@@ -11,7 +11,7 @@ const Disclaimer = () => {
         Disclaimer
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
       The claims and results mentioned are based on multiple internal studies and customer research surveys that Traya has conducted with a statistically significant sample size of users who were under expert observation and guidance
 

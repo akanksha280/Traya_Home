@@ -3,13 +3,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@coreui/coreui/dist/css/coreui.min.css";
 import img1  from '../images/circle.jpg'
 import img2 from '../images/pink.jpg';
-import {Button} from './RoundStyles'
+import {Button} from './RoundStyles';
+import Card2 from './Card2.js';
+import SafeScientific from './safeScientific.js'
+import Buildplan from './Buildplan';
+import Customer from './Customer';
+import Essentials from './Essentials';
+import Video from './video';
 const Round=()=> {
   return (
     <>
      
-
-<div className="card text-center mb-3" style={{width: "18rem;",height:"100vh;"}}>
+<Video/>
+<div className="card border-0 text-center mb-3" style={{width: "18rem;",height:"100vh;"}}>
   <div className="card-body">
     <h1 className="card-title">Hair Loss Has Multiple Root Causes</h1>
     <p className="card-text">
@@ -69,7 +75,14 @@ const Round=()=> {
     <Button className='btn btn-lg btn-secondary btn-round ' >TAKE THE HAIR TEST<sup style={{fontSize:"10px"}}>TM</sup></Button>
 						</div>
 </div>
+<Card2/>
 
+<Buildplan/>
+
+<br/><br/><br/>
+<Customer/>
+<SafeScientific/>
+<Essentials/>
 {/* CARd3 */}
 {/* <div className="card  mb-3" style={{width: "18rem;",height:"10000px;"}} > */}
 <div className="container position-relative border-rounded mb-9 mt-3 ml-7 mr-9 object-fit-cover pb-5 mb-3" style={{width: "18rem;",height:"100vh;"}} >

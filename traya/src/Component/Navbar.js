@@ -30,10 +30,8 @@ import {
     Button
 } from './NavbarStyles';
 import Marquee from './marquee.js';
-import Customer from './Customer.js';
-import SafeScientific from './safeScientific.js';
-import Buildplan from './Buildplan.js';
-import Card2 from './Card2.js';
+
+
 import {
 	// eslint-disable-next-line
 	CButton,
@@ -112,14 +110,13 @@ const Navbar = () => {
 			<section className='Card'>
 			<Marquee/>
 			<Circle/>
-			<SafeScientific/>
+		
 
-			{/* <Card2/> */}
-			<Buildplan/>
-			<br/><br/><br/>
-				<Customer></Customer>
-				<Disclaimer/>
+		 
+			
 				<GoogleReview/>
+				<Disclaimer/>
+				
 				<Footer1/>
 				
 				
