@@ -34,7 +34,7 @@ const CustomerCard = (props) =>{
 </div>
 
 </div>
-      {console.log(props)}
+     
   <div className="card-body">
     <h4 className='text-center fw-bold'>{props.name}</h4>
     <p className="text-center card-text">

@@ -62,7 +62,12 @@ console.log(cust+"hi");
 
 
         <>
-        <div className="card">
+        
+        <br/><br/><br/>
+        <div className="border-0 card">
+            <br/>
+        <h2 className='text-center fw-bold'>Our Customers</h2>
+        <br/><br/>
         <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-inner">
 
@@ -114,13 +119,12 @@ console.log(cust+"hi");
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<br/><br/><br/>
 </div>
+<br/><br/>
         </>
         )
-       //})}
-      
-   // </>
- // )
+    
 }
 
 export default Customer

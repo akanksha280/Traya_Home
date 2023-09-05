@@ -16,7 +16,7 @@ const SafeScientific=()=> {
     <>
      <h1 className='text-center'> Safe and Scientific </h1>
 
-<div className=" container position-relative border-rounded mb-9 mt-3 ml-7 mr-9 object-fit-cover pb-5 mb-3" style={{width: "18rem;",height:"100vh;"}}>
+<div className=" container position-relative border-rounded mb-9 mt-3 ml-7 mr-9 object-fit-cover pb-5 mb-3" style={{width: "100px;",height:"90vh;"}}>
   <div className="card-body">
     {/* <h1 className="card-title">Hair Loss Has Multiple Root Causes</h1> */}
     <p className="card-text">

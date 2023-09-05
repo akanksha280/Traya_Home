@@ -16,7 +16,7 @@ import Circle1 from './Round1.js';
 import Disclaimer from './Disclaimer.js';
 import Footer1 from './footer1.js';
 import img1 from '../images/hair.jpg'
-
+import GoogleReview from './GoogleReview.js';
 import Home from './Home.js';
 import {
 	Nav,
@@ -45,6 +45,7 @@ import {
 	CModalTitle,
   } from "@coreui/react";
 import '../App.css';
+
 
 
 const Navbar = () => {
@@ -112,10 +113,13 @@ const Navbar = () => {
 			<Marquee/>
 			<Circle/>
 			<SafeScientific/>
+
 			{/* <Card2/> */}
 			<Buildplan/>
+			<br/><br/><br/>
 				<Customer></Customer>
 				<Disclaimer/>
+				<GoogleReview/>
 				<Footer1/>
 				
 				
