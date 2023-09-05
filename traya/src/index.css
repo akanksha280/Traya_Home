@@ -51,8 +51,10 @@ border: 2px solid #3498db;
 text-decoration: none;
 
 }
-#bgImage{
-  background-image: url('images/hair.jpg');
+.bgImage{
+  /* background-image: url('images/hair.jpg'); */
+  text-decoration: none;
+  color:black;
 
  
 }

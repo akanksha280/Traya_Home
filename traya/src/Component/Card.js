@@ -3,11 +3,12 @@ import React from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import star from '../images/customer/star.png';
 const Card = (props) => {
+  const len=props.img.length;
   const ii=props.img.map((i)=>{
     console.log(i)
     return(
     <>
-     < div className='row '>
+     < div className='row row-cols-4'>
    <div className='cols-lg p-4 offset-1'>
   <img src={i.c} className="card-img-top  img-fluid " style={{maxWidth:"100%",height:"auto"}} alt="dihfh"/>
   <p>{i.months}</p>
@@ -23,7 +24,7 @@ const Card = (props) => {
     <h1 className='text-center fw-bold'>Our Customers</h1>
     <br></br>
     <div className='container card' style={{width:"10000px",height:"540px"}}>
-    <div id="carouselExampleControls" className=" carousel-dark slide" data-mdb-ride="carousel" data-interval="5000">
+    <div id="carouselExampleControls" className=" carousel carousel-dark slide" data-mdb-ride="carousel" data-interval="5000">
   
   <div className="carousel-inner">
     <div className="carousel-item active">

@@ -150,7 +150,42 @@ Mumbai - 400064, Maharashtra"
     </div> */}
    
   </footer>
+  <footer class="bg-light text-center text-white">
+
+  <div class="container p-4 pb-0">
+
+    <section class=" mb-4">
+      <div className='row'>
+        <div className='cols'>
+        <div className='cols'>
+       
+           
+                <p className='text-dark'>safe to use</p>
+            </div> 
+            <div className='cols'>
+             
+                <p className='text-dark'>safe to use</p>
+            </div>
+            <div className='cols'>
+             
+             <p className='text-dark'>safe to use</p>
+         </div>
+         <div className='cols'>
+             
+             <p className='text-dark'>safe to use</p>
+         </div>
+
+          </div>
+        
+          </div>
+    </section>
+    
+  </div>
+  
+
  
+ 
+</footer>
 </section>
     </>
   )

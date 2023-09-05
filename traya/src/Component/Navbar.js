@@ -9,10 +9,13 @@ import {FaRegUserCircle} from 'react-icons/fa';
 import {FaShoppingCart} from 'react-icons/fa';
 import {FaAngleRight} from 'react-icons/fa';
 import {FaAngleLeft} from 'react-icons/fa';
+import {FaInstagram} from 'react-icons/fa';
+import {FaFacebookSquare} from 'react-icons/fa'
 import Circle from './Round.js';
 import Circle1 from './Round1.js';
 import Disclaimer from './Disclaimer.js';
 import Footer1 from './footer1.js';
+import img1 from '../images/hair.jpg'
 
 import Home from './Home.js';
 import {
@@ -109,7 +112,7 @@ const Navbar = () => {
 			<Marquee/>
 			<Circle/>
 			<SafeScientific/>
-			<Card2/>
+			{/* <Card2/> */}
 			<Buildplan/>
 				<Customer></Customer>
 				<Disclaimer/>
@@ -124,11 +127,14 @@ const Navbar = () => {
         
       </CButton> */}
 	   <section className="bg-image d-flex align-items-center" ></section>
-      <CModal fullscreen visible={bar} onClose={() => setBar(false)} id="bgImage">
+	   
+      <CModal fullscreen visible={bar} onClose={() => setBar(false)} >
+	  <img  src={img1} className="card-img-top" alt="Card cap"/>
+    <div className="card-img-overlay">
 	 <div >
 
         <CModalHeader onClose={() => setBar(false)} >
-          <CModalTitle className='text-muted fs-1 fw-bolder'>Traya.</CModalTitle>
+          <CModalTitle className=' fs-1 fw-bolder' style={{textColor:"black"}}>Traya.</CModalTitle>
         </CModalHeader>
         <CModalBody>
 		<div className="container overflow-hidden" >
@@ -137,24 +143,46 @@ const Navbar = () => {
     <div className="col">
      <div className="p-1 ">
 	 <h3 className='fw-bold'>WHAT WE DO</h3><br/>
-<h4 className='fw-light'>We help you take control of your hairloss in a personalised, and scientific way.</h4>
-<div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold' >Track Order</Button1></div><br/>
-<div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold ' >My Plan</Button1></div><br/>
-<div><Button1 className='btn btn-sm btn-outline-dark btn-round fw-bold ' >Hair Test<sup style={{fontSize:"10px"}}>TM</sup></Button1></div><br/>
-<div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold ' >Traya Combos</Button1></div><br/>
-<div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold ' >5 Month Money Back Gurantee</Button1></div><br/>
-<div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold ' >Log in</Button1></div><br/>
-<div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold ' >Referral</Button1></div>
-<div><Button1 className='btn  btn-sm btn-outline-dark btn-round fw-bold ' onClick={handleAngle}>Products<span>{isActive?<FaAngleRight/>:<FaAngleLeft/>}
+<h5 className='fw-light bgImage' >We help you take control of your hairloss in a personalised, and scientific way.</h5>
+<div><Button1 className='btn  btn-sm  btn-outline btn-round ' style={{outlineColor:"black",textColor:"black",outlineStyle:"solid"}} >Track Order</Button1></div><br/>
+<div><Button1 className='btn  btn-sm  btn-outline btn-round  ' style={{outlineColor:"black",textColor:"black",outlineStyle:"solid"}}>My Plan</Button1></div><br/>
+<div><Button1 className='btn btn-sm  btn-outline btn-round  ' style={{outlineColor:"black",textColor:"black",outlineStyle:"solid"}}>Hair Test<sup style={{fontSize:"10px"}}>TM</sup></Button1></div><br/>
+<div><Button1 className='btn  btn-sm  btn-outline btn-round  ' style={{outlineColor:"black",textColor:"black",outlineStyle:"solid"}}>Traya Combos</Button1></div><br/>
+<div><Button1 className='btn  btn-sm  btn-outline btn-round  'style={{outlineColor:"black",textColor:"black",outlineStyle:"solid"}} >5 Month Money Back Gurantee</Button1></div><br/>
+<div><Button1 className='btn  btn-sm  btn-outline btn-round  'style={{outlineColor:"black",textColor:"black",outlineStyle:"solid"}} >Log in</Button1></div><br/>
+<div><Button1 className='btn  btn-sm  btn-outline btn-round  'style={{outlineColor:"black",textColor:"black",outlineStyle:"solid"}} >Referral</Button1></div><br/>
+
+<div><Button1 className='btn  btn-sm  btn-outline btn-round  'style={{outlineColor:"black",textColor:"black",outlineStyle:"solid"}} onClick={handleAngle}>Products<span>{isActive?<FaAngleRight/>:<FaAngleLeft/>}
 <Fade right>
- <h1>gjjsdj</h1>
+ 
 </Fade>
 </span></Button1></div><br/>
 
 	 </div>
     </div>
-    <div className="col">
-      <div className="p-3  ">Custom column padding</div>
+    <div className="col float-right offset-2">
+      <h3 className="  fw-bold text-uppercase" >How We Do It</h3>
+	  <div  >
+	  <div ><a href="/#" className='bgImage'>Traya Science</a></div><br/>
+	  <div  ><a href="/#" className='bgImage'>Ingredients</a></div><br/>
+	  <div ><a href="/#" className='bgImage'>Reviews</a></div><br/>
+	  <div ><a href="/#"className='bgImage'>Hero's Page</a></div>
+	  </div>
+	  <h3 className="  fw-bold text-uppercase" >Who We Are</h3>
+	  <div id='bgImage' >
+	  <div ><a href="/#"className='bgImage'>About Used</a></div><br/>
+	  <div  ><a href="/#"className='bgImage'>Our Experts</a></div><br/>
+	  <div ><a href="/#"className='bgImage'>Blog</a></div><br/>
+	  
+	  </div>
+	  <h3 className="  fw-bold text-uppercase" >Get in touch</h3>
+	  <div  >
+	  <div ><a href="/#" className='bgImage'><FaInstagram size={30}/></a>
+	  <a href="/#" className='bgImage'><FaFacebookSquare size={30}/></a>
+	  <a href="/#" className='bgImage'><FaWhatsapp size={30}/></a>
+	  </div>
+	  
+	  </div>
     </div>
   </div>
 </div>
@@ -166,8 +194,10 @@ const Navbar = () => {
           <CButton color="primary">Save changes</CButton>
         </CModalFooter> */}
 		</div>
+		</div>
       </CModal>
-	  
+	
+	
 		</Fragment>
         
 	)
