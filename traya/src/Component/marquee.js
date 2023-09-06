@@ -14,17 +14,19 @@ import rate from '../images/rate.png'
 const Marquee=()=> {
   return (
     <>
-    <div className='row '> <div className='cols offset-1'>
+     <div className='row '> <div className='cols offset-1'>
     <a href='/#'><img src={google} alt='goog'></img></a>
     <span className='fw-bold'>4.5</span><a href='/#'><img src={rate} alt='rat'></img></a>
-      </div></div>
-      <div className='row '> <div className='cols-3 offset-1'>
-   
+      </div>
+      
+      <div className='cols-3 offset-1'>
       <a href='/#'><img src={review} alt='rev'></img></a>
-      </div></div><br/>
+      </div></div><br/> 
+      
       <div className='row'>
     
      <marquee className='container-fluid' >
+      
         <img src={im1} style={{height:"-6px;"}}  alt='alternative imag' className='img-fluid'></img>&nbsp;&nbsp;
         <img src={im2} style={{height:"6px;"}} alt='alternative imag'className='img-fluid'></img>&nbsp;&nbsp;
         <img src={im3} style={{height:"6px;"}} alt='alternative imag'className='img-fluid'></img>&nbsp;&nbsp;
@@ -37,8 +39,8 @@ const Marquee=()=> {
         </marquee>
         <hr style={{borderColor:"#0EECCE"}}></hr>
         </div>  
-        <br/>
-        <br/>
+        
+        
     </>
   )
 }

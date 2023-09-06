@@ -36,7 +36,7 @@ const Video= () => {
 
         <>
         
-        <br/><br/><br/>
+        <br/>
         <div className="border-0 text-center container " >
             <br/>
         
@@ -91,7 +91,7 @@ const Video= () => {
   </div>
  
 
-<br/><br/><br/>
+<br/>
 
 <br/><br/>
 
